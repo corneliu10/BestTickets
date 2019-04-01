@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Client extends Person {
@@ -7,6 +8,7 @@ public class Client extends Person {
 
     public Client(String firstName, String lastName, int age) {
         super(firstName, lastName, age);
+        this.tickets = new ArrayList<>();
     }
 
     public List<Ticket> getTickets() {

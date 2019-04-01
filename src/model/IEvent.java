@@ -5,7 +5,10 @@ public interface IEvent  {
     boolean removeArtist(Artist artist);
 
     Ticket generateTicket();
-    boolean buyTicket(Client client);
+    boolean addTicket(Ticket ticket);
+    boolean buyNewTicket(Client client);
+    boolean assignTicket(Client client, Ticket ticket);
     boolean removeTicket(Ticket ticket);
     boolean containsTicket(Ticket ticket);
+    int ticketsSold();
 }

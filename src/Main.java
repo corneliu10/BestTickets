@@ -1,5 +1,10 @@
+import service.EventService;
+import service.TicketService;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hello");
+        EventService.getInstance().showEvents();
+        TicketService.getInstance().showTickets();
+        EventService.getInstance().showEvents();
     }
 }

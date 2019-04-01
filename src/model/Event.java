@@ -1,9 +1,6 @@
 package model;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Event implements IEvent {
     private static int nrOfEvents = 0;
@@ -24,6 +21,7 @@ public class Event implements IEvent {
         this.startDate = startDate;
         this.endDate = endDate;
         this.tickets = new HashMap<Integer, Ticket>();
+        this.artists = new ArrayList<Artist>();
 
         nrOfEvents++;
         id = nrOfEvents;
@@ -53,23 +51,69 @@ public class Event implements IEvent {
     }
 
     @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Event id: "); sb.append(this.id);
+        sb.append('\n');
+        sb.append("Event Title: "); sb.append(this.title);
+        sb.append('\n');
+        sb.append("Artists: ");
+        for (Artist artist : artists) {
+            sb.append(artist.toString());
+        }
+        sb.append("Location: "); sb.append(location);
+        sb.append('\n');
+        sb.append("Start date: "); sb.append(this.startDate.toString());
+        sb.append('\n');
+        sb.append("End date: "); sb.append(this.endDate.toString());
+        sb.append('\n');
+        sb.append("Tickets sold: "); sb.append(this.ticketsSold());
+        sb.append('\n');
+        sb.append("--------------");
+        sb.append('\n');
+        return sb.toString();
+    }
+
+    @Override
     public Ticket generateTicket() {
-        Ticket ticket = new Ticket(100, this.id); // TODO set custom price per event
+        Ticket ticket = new Ticket(100, this.id);
+        tickets.put(ticket.getId(), ticket);
+
         return ticket;
     }
 
     @Override
-    public boolean buyTicket(Client client) {
+    public boolean addTicket(Ticket ticket) {
         if (tickets.size() < maxTickets) {
-            Ticket ticket = generateTicket();
-            ticket.setClient(client);
-            client.addTicket(ticket);
-
             tickets.put(ticket.getId(), ticket);
             return true;
         }
 
         return false; // sold out
+    }
+
+    @Override
+    public boolean buyNewTicket(Client client) {
+        if (tickets.size() < maxTickets) {
+            Ticket ticket = generateTicket();
+            ticket.setClient(client);
+            client.addTicket(ticket);
+
+            return true;
+        }
+
+        return false; // sold out
+    }
+
+    @Override
+    public boolean assignTicket(Client client, Ticket ticket) {
+        if (ticket.getIdEvent() == getId()) {
+            ticket.setClient(client);
+            client.addTicket(ticket);
+            return true;
+        }
+
+        return false; // ticket not for this event
     }
 
     @Override
@@ -88,6 +132,17 @@ public class Event implements IEvent {
             return true;
 
         return false;
+    }
+
+    @Override
+    public int ticketsSold() {
+        int count = 0;
+        for (Map.Entry<Integer, Ticket> entry : tickets.entrySet()) {
+            if (entry.getValue().getClient() != null)
+                count++;
+        }
+
+        return count;
     }
 
     public String getTitle() {

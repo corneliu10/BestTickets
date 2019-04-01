@@ -17,8 +17,27 @@ public class Person {
         id = nrOfPersons;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Person id: "); sb.append(this.id);
+        sb.append('\n');
+        sb.append("First Name: "); sb.append(this.firstName);
+        sb.append('\n');
+        sb.append("Last Name: "); sb.append(this.lastName);
+        sb.append('\n');
+        sb.append("------");
+        sb.append('\n');
+
+        return sb.toString();
+    }
+
     public String getFirstName() {
         return firstName;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setFirstName(String firstName) {
