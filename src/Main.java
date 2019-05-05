@@ -1,10 +1,10 @@
-import service.EventService;
-import service.TicketService;
+import model.Client;
+
+import java.lang.reflect.Field;
 
 public class Main {
     public static void main(String[] args) {
-        EventService.getInstance().showEvents();
-        TicketService.getInstance().showTickets();
-        EventService.getInstance().showEvents();
+        Application.run();
+//        CSVService.writeDataToFile("clients.csv", new String[]{"abc", "ab"});
     }
 }

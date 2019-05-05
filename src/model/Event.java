@@ -3,8 +3,7 @@ package model;
 import java.util.*;
 
 public class Event implements IEvent {
-    private static int nrOfEvents = 0;
-    private int id;
+    public static int nrOfEvents = 0;
 
     private String title;
     private Map<Integer, Ticket> tickets;
@@ -13,8 +12,9 @@ public class Event implements IEvent {
     private List<Artist> artists;
     private Date startDate;
     private Date endDate;
+    private int id;
 
-    public Event(String title, String location, Date startDate, Date endDate, int maxTickets) {
+    public Event(String title, String location, Date startDate, Date endDate, int maxTickets, int id) {
         this.title = title;
         this.maxTickets = maxTickets;
         this.location = location;
@@ -22,17 +22,12 @@ public class Event implements IEvent {
         this.endDate = endDate;
         this.tickets = new HashMap<Integer, Ticket>();
         this.artists = new ArrayList<Artist>();
-
+        this.id = id;
         nrOfEvents++;
-        id = nrOfEvents;
     }
 
     public int getId() {
         return id;
-    }
-
-    public static int getNrOfEvents() {
-        return nrOfEvents;
     }
 
     @Override

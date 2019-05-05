@@ -25,6 +25,20 @@ public class TicketService {
         return ticket;
     }
 
+    public String[] extractAttributes(Ticket ticket) {
+        String price = String.valueOf(ticket.getPrice());
+        String eventId = String.valueOf(ticket.getIdEvent());
+
+        return new String[]{price, eventId};
+    }
+
+    public Ticket createTicket(String[] attributes) {
+        int price = Integer.parseInt(attributes[0]);
+        int eventId = Integer.parseInt(attributes[1]);
+
+        return new Ticket(price, eventId);
+    }
+
     public static TicketService getInstance() {
         return instance;
     }

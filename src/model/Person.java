@@ -1,35 +1,30 @@
 package model;
 
 public class Person {
-    private static int nrOfPersons = 0;
-    private int id;
+    public static int nrPersons = 0;
 
     private String firstName;
     private String lastName;
     private int age;
+    private int id;
 
-    public Person(String firstName, String lastName, int age) {
+    public Person(String firstName, String lastName, int age, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.id = id;
 
-        nrOfPersons++;
-        id = nrOfPersons;
+        nrPersons += 1;
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Person id: "); sb.append(this.id);
-        sb.append('\n');
-        sb.append("First Name: "); sb.append(this.firstName);
-        sb.append('\n');
-        sb.append("Last Name: "); sb.append(this.lastName);
-        sb.append('\n');
-        sb.append("------");
-        sb.append('\n');
-
-        return sb.toString();
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                '}';
     }
 
     public String getFirstName() {

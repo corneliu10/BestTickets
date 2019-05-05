@@ -8,8 +8,8 @@ import java.util.TreeSet;
 public class Artist extends Person {
     private SortedSet<Event> upcomingEvents;
 
-    public Artist(String firstName, String lastName, int age) {
-        super(firstName, lastName, age);
+    public Artist(String firstName, String lastName, int age, int id) {
+        super(firstName, lastName, age, id);
         upcomingEvents = new TreeSet<>(Comparator.comparing(Event::getStartDate));
     }
 
