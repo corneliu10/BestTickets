@@ -1,5 +1,8 @@
 package model;
 
+import logging.Logger;
+import service.TicketService;
+
 import java.util.*;
 
 public class Event implements IEvent {
@@ -33,15 +36,18 @@ public class Event implements IEvent {
     @Override
     public void addArtist(Artist artist) {
         artists.add(artist);
+        Logger.getInstance().info("Added artist " + artist.toString() + " to event " + this.getId());
     }
 
     @Override
     public boolean removeArtist(Artist artist) {
         if (artists.contains(artist)) {
             artists.remove(artist);
+            Logger.getInstance().info("Removed artist " + artist.toString() + " from event " + this.getId());
             return true;
         }
 
+        Logger.getInstance().warning("Artist " + artist.toString() + " not found in event " + this.getId());
         return false; // artist not found
     }
 
@@ -71,7 +77,7 @@ public class Event implements IEvent {
 
     @Override
     public Ticket generateTicket() {
-        Ticket ticket = new Ticket(100, this.id);
+        Ticket ticket = TicketService.getInstance().createTicket(100, this.id);
         tickets.put(ticket.getId(), ticket);
 
         return ticket;
@@ -93,10 +99,14 @@ public class Event implements IEvent {
             Ticket ticket = generateTicket();
             ticket.setClient(client);
             client.addTicket(ticket);
+            Logger.getInstance().info("Added ticket " + ticket.getId() + " to client " + client.getId() +
+                                            " for the event " + this.getId());
 
             return true;
         }
 
+        Logger.getInstance().warning("Sold out tickets" +
+                                          " for the event " + this.getId());
         return false; // sold out
     }
 
@@ -115,9 +125,13 @@ public class Event implements IEvent {
     public boolean removeTicket(Ticket ticket) {
         if (this.containsTicket(ticket)) {
             tickets.remove(ticket.getId());
+            Logger.getInstance().info("Ticket " + ticket.getId() + " removed " +
+                    " from the event " + this.getId());
             return true;
         }
 
+        Logger.getInstance().info("Ticket " + ticket.getId() + " not found " +
+                " for the event " + this.getId());
         return false; // ticket not found
     }
 

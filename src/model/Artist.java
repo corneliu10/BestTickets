@@ -1,5 +1,7 @@
 package model;
 
+import logging.Logger;
+
 import java.util.Comparator;
 import java.util.Set;
 import java.util.SortedSet;
@@ -14,6 +16,7 @@ public class Artist extends Person {
     }
 
     public void addEvent(Event event) {
+        Logger.getInstance().info("Added event " + event.getId() + " to artist " + this.getId());
         this.upcomingEvents.add(event);
     }
 

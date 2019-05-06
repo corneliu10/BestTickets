@@ -1,30 +1,37 @@
 package service;
 
-import model.Client;
-import model.Event;
+import logging.Logger;
 import model.Ticket;
+import utilities.CSVUtilities;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TicketService {
+public class TicketService extends CSVUtilities<Ticket> {
+    private static final String FILENAME = "tickets.csv";
+
     private static List<Ticket> tickets = new ArrayList<>();
     private static TicketService instance = new TicketService();
 
     private TicketService() {
-        Event event = EventService.getInstance().getEventById(1);
-        Client client = ClientService.getInstance().getClientById(3);
-        createTicket(10, event.getId());
-        event.addTicket(tickets.get(0));
-        event.assignTicket(client, tickets.get(0));
+        if (!CSVService.fileExists(FILENAME)) {
+            CSVService.createHeaderFile(FILENAME, new String[]{"Price", "Event ID", "Ticket ID"});
+        }
     }
 
     public Ticket createTicket(int price, int eventId) {
-        Ticket ticket = new Ticket(price, eventId);
+        return createTicket(price, eventId, Ticket.nrOfTickets);
+    }
+
+    private Ticket createTicket(int price, int eventId, int ticketID) {
+        Ticket ticket = new Ticket(price, eventId, ticketID);
         tickets.add(ticket);
+        Logger.getInstance().info("Created ticket for event " + eventId);
+
         return ticket;
     }
 
+    @Override
     public String[] extractAttributes(Ticket ticket) {
         String price = String.valueOf(ticket.getPrice());
         String eventId = String.valueOf(ticket.getIdEvent());
@@ -32,11 +39,16 @@ public class TicketService {
         return new String[]{price, eventId};
     }
 
+    public void loadObjects() {
+        super.loadObjects(FILENAME, this::createTicket);
+    }
+
     public Ticket createTicket(String[] attributes) {
         int price = Integer.parseInt(attributes[0]);
         int eventId = Integer.parseInt(attributes[1]);
+        int ticketId = Integer.parseInt(attributes[2]);
 
-        return new Ticket(price, eventId);
+        return createTicket(price, eventId, ticketId);
     }
 
     public static TicketService getInstance() {
@@ -48,4 +60,6 @@ public class TicketService {
             System.out.println(ticket);
         }
     }
+
+
 }

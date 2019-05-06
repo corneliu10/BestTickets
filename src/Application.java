@@ -20,7 +20,7 @@ public class Application {
     }
 
     private static void loadData() {
-        clientService.loadClients();
+        clientService.loadObjects();
         eventService.loadEvents();
     }
 
@@ -83,7 +83,7 @@ public class Application {
         int age = Integer.parseInt(readString("Age: "));
 
         Client client = clientService.createClient(firstName, lastName, age);
-        clientService.writeClientToFile(client);
+        clientService.writeToFile(client);
     }
 
     private static int readKey() {

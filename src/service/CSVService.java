@@ -1,6 +1,8 @@
 package service;
 
 import com.sun.javafx.binding.StringFormatter;
+import logging.Logger;
+import sun.rmi.runtime.Log;
 
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -21,6 +23,7 @@ public class CSVService {
         List<String[]> data = new ArrayList<>();
         Path pathToFile = Paths.get(fileName);
 
+        Logger.getInstance().info("Reading from " + fileName);
         try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.US_ASCII)) { // read the first line from the text file String line = br.readLine(); // loop until all lines are read while (line != null) {
             String line = br.readLine();
 
@@ -32,8 +35,10 @@ public class CSVService {
             }
 
         } catch (NoSuchFileException e) {
-            System.out.println("File " + fileName + " does not exist!");
+            Logger.getInstance().error("File " + fileName + " does not exist!");
+
         } catch (IOException e) {
+            Logger.getInstance().error(e.getMessage());
             e.printStackTrace();
         }
 
@@ -42,6 +47,8 @@ public class CSVService {
 
     public static void writeDataToFile(String fileName, String[] data) {
         Path pathToFile = Paths.get(fileName);
+
+        Logger.getInstance().info("Writing to " + fileName);
         try {
             FileWriter fw = new FileWriter(fileName, true);
 
@@ -52,6 +59,7 @@ public class CSVService {
             fw.append("\n");
             fw.close();
         } catch (IOException e) {
+            Logger.getInstance().error(e.getMessage());
             e.printStackTrace();
         }
     }

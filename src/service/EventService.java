@@ -1,5 +1,6 @@
 package service;
 
+import logging.Logger;
 import model.Artist;
 import model.Client;
 import model.Event;
@@ -31,8 +32,14 @@ public class EventService {
     }
 
     public Event createEvent(String title, String location, Date startDate, Date endDate, int maxTickets) {
-        Event event = new Event(title, location, startDate, endDate, maxTickets, Event.nrOfEvents);
+        return createEvent(title, location, startDate, endDate, maxTickets, Event.nrOfEvents);
+    }
+
+    public Event createEvent(String title, String location, Date startDate,
+                             Date endDate, int maxTickets, int id) {
+        Event event = new Event(title, location, startDate, endDate, maxTickets, id);
         events.add(event);
+        Logger.getInstance().info("Event " + id + " created!");
         return event;
     }
 
@@ -84,12 +91,16 @@ public class EventService {
         List<String[]> events = CSVService.readFromFile(FILENAME);
         events.remove(0); // removing header
 
+        Logger.getInstance().info("Loading events...");
         for (String[] eventAttributes : events) {
             try {
                 createEvent(eventAttributes);
             } catch (Exception e) {
+                Logger.getInstance().error("Error on loading event " + eventAttributes[5]);
                 e.printStackTrace();
             }
         }
+
+        Logger.getInstance().info("Events loaded!");
     }
 }

@@ -1,12 +1,13 @@
 package service;
 
+import logging.Logger;
 import model.Client;
+import utilities.CSVUtilities;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.lang.reflect.*;
 
-public class ClientService {
+public class ClientService extends CSVUtilities<Client> {
     private static final String FILENAME = "clients.csv";
 
     private static List<Client> clients = new ArrayList<>();
@@ -24,18 +25,18 @@ public class ClientService {
 
     public Client createClient(String firstName, String lastName, int age) {
         int id = Client.nrPersons;
+        return createClient(firstName, lastName, age, id);
+    }
+
+    private Client createClient(String firstName, String lastName, int age, int id) {
         Client client = new Client(firstName, lastName, age, id);
         clients.add(client);
+        Logger.getInstance().info("Client " + client.toString() + " created!");
         return client;
     }
 
-    public void loadClients() {
-        List<String[]> clients = CSVService.readFromFile(FILENAME);
-        clients.remove(0); // removing header
-
-        for (String[] clientAttributes : clients) {
-            createClient(clientAttributes);
-        }
+    public void loadObjects() {
+        super.loadObjects(FILENAME, this::createClient);
     }
 
     public Client createClient(String[] attributes) {
@@ -44,10 +45,7 @@ public class ClientService {
         int age = Integer.parseInt(attributes[2]);
         int id = Integer.parseInt(attributes[3]);
 
-        Client client = new Client(firstName, lastName, age, id);
-        clients.add(client);
-
-        return client;
+        return createClient(firstName, lastName, age, id);
     }
 
     public Client getClientById(int idClient) {
@@ -68,12 +66,12 @@ public class ClientService {
         return new String[]{firstName, lastName, age, id};
     }
 
-    public void writeClientToFile(Client client) {
-        String[] attributes = extractAttributes(client);
-        CSVService.writeDataToFile(FILENAME, attributes);
+    public void writeToFile(Client obj) {
+        super.writeToFile(obj, FILENAME);
     }
 
     public void showClients() {
+        Logger.getInstance().info("Show clients successfully!");
         for (Client client : clients) {
             System.out.println(client);
         }

@@ -1,28 +1,26 @@
 package model;
 
 public class Ticket {
-    private static int nrOfTickets = 0;
-    private int id;
+    public static int nrOfTickets = 0;
     private Client client = null;
     private int price;
     private int idEvent;
+    private int id;
 
     private void incrementTickets() {
         nrOfTickets++;
-        id = nrOfTickets;
     }
 
-    public Ticket(int price, int idEvent) {
+    public Ticket(int price, int idEvent, int id) {
         this.price = price;
         this.idEvent = idEvent;
+        this.id = id;
         incrementTickets();
     }
 
-    public Ticket(Client client, int price, int idEvent) {
+    public Ticket(Client client, int price, int idEvent, int id) {
         this.client = client;
-        this.price = price;
-        this.idEvent = idEvent;
-        incrementTickets();
+        new Ticket(price, idEvent, id);
     }
 
     public int getId() {
@@ -47,14 +45,6 @@ public class Ticket {
 
     public int getIdEvent() {
         return idEvent;
-    }
-
-    public void setIdEvent(int idEvent) {
-        this.idEvent = idEvent;
-    }
-
-    public static int getNrOfTickets() {
-        return nrOfTickets;
     }
 
     @Override
