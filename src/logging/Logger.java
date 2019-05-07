@@ -43,4 +43,22 @@ public class Logger implements ILogger {
     public void error(String msg) {
         _logger.log(Level.SEVERE, msg);
     }
+
+    @Override
+    public void info(String msg, boolean verbose) {
+        info(msg);
+        if (verbose) System.out.println(msg);
+    }
+
+    @Override
+    public void warning(String msg, boolean verbose) {
+        warning(msg);
+        if (verbose) System.out.println(msg);
+    }
+
+    @Override
+    public void error(String msg, boolean verbose) {
+        error(msg);
+        if (verbose) System.out.println(msg);
+    }
 }

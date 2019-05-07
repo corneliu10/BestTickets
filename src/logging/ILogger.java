@@ -6,4 +6,10 @@ public interface ILogger {
     void warning(String msg);
 
     void error(String msg);
+
+    void info(String msg, boolean verbose);
+
+    void warning(String msg, boolean verbose);
+
+    void error(String msg, boolean verbose);
 }

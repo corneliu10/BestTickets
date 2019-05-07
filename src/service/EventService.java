@@ -1,15 +1,18 @@
 package service;
 
+import javafx.util.Pair;
 import logging.Logger;
 import model.Artist;
 import model.Client;
 import model.Event;
+import utilities.CSVUtilities;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class EventService {
+public class EventService extends CSVUtilities<Event> {
     private static final String FILENAME = "events.csv";
 
     private static List<Event> events = new ArrayList<>();
@@ -31,23 +34,35 @@ public class EventService {
         return instance;
     }
 
+    public Event createEvent(String title, String location, Date startDate,
+                             Date endDate, int maxTickets, boolean verbose) {
+        return createEvent(title, location, startDate, endDate, maxTickets, Event.nrOfEvents, verbose);
+    }
+
     public Event createEvent(String title, String location, Date startDate, Date endDate, int maxTickets) {
-        return createEvent(title, location, startDate, endDate, maxTickets, Event.nrOfEvents);
+        return createEvent(title, location, startDate, endDate, maxTickets, Event.nrOfEvents, false);
     }
 
     public Event createEvent(String title, String location, Date startDate,
-                             Date endDate, int maxTickets, int id) {
+                             Date endDate, int maxTickets, int id, boolean verbose) {
         Event event = new Event(title, location, startDate, endDate, maxTickets, id);
         events.add(event);
-        Logger.getInstance().info("Event " + id + " created!");
+        Logger.getInstance().info("Event " + id + " created!", verbose);
         return event;
     }
 
-    public Event createEvent(String[] attributes) throws Exception {
+    public Event createEvent(String[] attributes) {
         String title = attributes[0];
         String location = attributes[1];
-        Date startDate = CSVService.dateFormatter.parse(attributes[2]);
-        Date endDate = CSVService.dateFormatter.parse(attributes[3]);
+        Date startDate = null;
+        Date endDate = null;
+        try {
+            startDate = CSVService.dateFormatter.parse(attributes[2]);
+            endDate = CSVService.dateFormatter.parse(attributes[3]);
+        } catch (ParseException e) {
+            Logger.getInstance().error(e.getMessage());
+            e.printStackTrace();
+        }
         int maxTickets = Integer.parseInt(attributes[4]);
         int eventId = Integer.parseInt(attributes[5]);
 
@@ -56,6 +71,7 @@ public class EventService {
         return event;
     }
 
+    @Override
     public String[] extractAttributes(Event event) {
         String title = event.getTitle();
         String location = event.getLocation();
@@ -73,6 +89,10 @@ public class EventService {
         }
     }
 
+    public void writeToFile(Event obj) {
+        super.writeToFile(obj, FILENAME);
+    }
+
     public Event getEventById(int idEvent) {
         for (Event event : events) {
             if (event.getId() == idEvent)
@@ -82,25 +102,7 @@ public class EventService {
         return null;
     }
 
-    public void writeEventToFile(Event event) {
-        String[] attributes = extractAttributes(event);
-        CSVService.writeDataToFile(FILENAME, attributes);
-    }
-
-    public void loadEvents() {
-        List<String[]> events = CSVService.readFromFile(FILENAME);
-        events.remove(0); // removing header
-
-        Logger.getInstance().info("Loading events...");
-        for (String[] eventAttributes : events) {
-            try {
-                createEvent(eventAttributes);
-            } catch (Exception e) {
-                Logger.getInstance().error("Error on loading event " + eventAttributes[5]);
-                e.printStackTrace();
-            }
-        }
-
-        Logger.getInstance().info("Events loaded!");
+    public void loadObjects() {
+        super.loadObjects(FILENAME, this::createEvent);
     }
 }

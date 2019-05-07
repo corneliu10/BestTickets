@@ -62,7 +62,7 @@ public class Event implements IEvent {
         for (Artist artist : artists) {
             sb.append(artist.toString());
         }
-        sb.append("Location: "); sb.append(location);
+        sb.append("\nLocation: "); sb.append(location);
         sb.append('\n');
         sb.append("Start date: "); sb.append(this.startDate.toString());
         sb.append('\n');
@@ -147,8 +147,8 @@ public class Event implements IEvent {
     public int ticketsSold() {
         int count = 0;
         for (Map.Entry<Integer, Ticket> entry : tickets.entrySet()) {
-            if (entry.getValue().getClient() != null)
-                count++;
+//            if (entry.getValue().getClient() != null)
+            count++;
         }
 
         return count;

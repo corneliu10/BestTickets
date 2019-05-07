@@ -1,15 +1,31 @@
+import model.Artist;
 import model.Client;
 import model.Event;
-import service.ClientService;
-import service.EventService;
+import model.Ticket;
+import service.*;
 
 import java.util.Date;
 import java.util.Scanner;
 
 public class Application {
-    private static final int OPTIONS = 5;
+    private static final String[] menuOptions = new String[] {
+        "1. Add client",
+        "2. Add artist",
+        "3. Add event",
+        "4. Add ticket",
+        "5. Assign event to artist",
+        "6. Show clients",
+        "7. Show events",
+        "8. Show tickets",
+        "9. Show artists",
+    };
+    private static final int OPTIONS = menuOptions.length;
+
     private static ClientService clientService = ClientService.getInstance();
     private static EventService eventService = EventService.getInstance();
+    private static TicketService ticketService = TicketService.getInstance();
+    private static ArtistService artistService = ArtistService.getInstance();
+    private static EventArtistsService eventArtistsService = EventArtistsService.getInstance();
 
     public static void run() {
         loadData();
@@ -21,15 +37,16 @@ public class Application {
 
     private static void loadData() {
         clientService.loadObjects();
-        eventService.loadEvents();
+        eventService.loadObjects();
+        ticketService.loadObjects();
+        artistService.loadObjects();
+        eventArtistsService.loadObjects();
     }
 
     private static void showOptions() {
-        System.out.println("1. Add client");
-        System.out.println("2. Add artist");
-        System.out.println("3. Add event");
-        System.out.println("4. Show clients");
-        System.out.println("5. Show events");
+        for (String option : menuOptions) {
+            System.out.println(option);
+        }
     }
 
     private static void executeCommand(int readKey) {
@@ -44,10 +61,22 @@ public class Application {
                 addEvent();
                 break;
             case 4:
-                showClients();
+                addTicket();
                 break;
             case 5:
-                showEvent();
+                assignEventToArtist();
+                break;
+            case 6:
+                showClients();
+                break;
+            case 7:
+                showEvents();
+                break;
+            case 8:
+                showTickets();
+                break;
+            case 9:
+                showArtists();
                 break;
             default:
                 System.out.println("Wrong input! Try again...");
@@ -55,7 +84,32 @@ public class Application {
         }
     }
 
-    private static void showEvent() {
+    private static void assignEventToArtist() {
+        int artistID = Integer.parseInt(readString("Artist ID: "));
+        int eventID = Integer.parseInt(readString("Event ID: "));
+
+        eventArtistsService.addPair(eventID, artistID);
+    }
+
+    private static void showArtists() {
+        artistService.showObjects();
+    }
+
+    private static void showTickets() {
+        ticketService.showTickets();
+    }
+
+    private static void addTicket() {
+        int price = Integer.parseInt(readString("Price: "));
+        int eventID = Integer.parseInt(readString("Event ID: "));
+
+        Ticket ticket = ticketService.createTicket(price, eventID, true);
+        if (ticket != null) {
+            ticketService.writeToFile(ticket);
+        }
+    }
+
+    private static void showEvents() {
         eventService.showEvents();
     }
 
@@ -70,11 +124,17 @@ public class Application {
         Date endDate = new Date();
         int maxTickets = Integer.parseInt(readString("Max Tickets: "));
 
-        Event event = eventService.createEvent(title, location, startDate, endDate, maxTickets);
-        eventService.writeEventToFile(event);
+        Event event = eventService.createEvent(title, location, startDate, endDate, maxTickets, true);
+        eventService.writeToFile(event);
     }
 
     private static void addArtist() {
+        String firstName = readString("First Name: ");
+        String lastName = readString("Last Name: ");
+        int age = Integer.parseInt(readString("Age: "));
+
+        Artist artist = artistService.createArtist(firstName, lastName, age, true);
+        artistService.writeToFile(artist);
     }
 
     private static void addClient() {
@@ -82,7 +142,7 @@ public class Application {
         String lastName = readString("Last Name: ");
         int age = Integer.parseInt(readString("Age: "));
 
-        Client client = clientService.createClient(firstName, lastName, age);
+        Client client = clientService.createClient(firstName, lastName, age, true);
         clientService.writeToFile(client);
     }
 

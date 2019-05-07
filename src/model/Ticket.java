@@ -49,18 +49,11 @@ public class Ticket {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Ticket id: "); sb.append(this.id);
-        sb.append('\n');
-        sb.append("Price: "); sb.append(this.price);
-        sb.append("\n");
-        if (this.client != null) {
-            sb.append("Client: "); sb.append(this.client);
-            sb.append("\n");
-        }
-        sb.append("----");
-        sb.append("\n");
-
-        return sb.toString();
+        return "Ticket{" +
+                "client=" + client +
+                ", price=" + price +
+                ", idEvent=" + idEvent +
+                ", id=" + id +
+                '}';
     }
 }

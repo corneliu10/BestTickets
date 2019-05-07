@@ -1,7 +1,9 @@
 package service;
 
 import logging.Logger;
+import model.Event;
 import model.Ticket;
+import sun.rmi.runtime.Log;
 import utilities.CSVUtilities;
 
 import java.util.ArrayList;
@@ -19,14 +21,27 @@ public class TicketService extends CSVUtilities<Ticket> {
         }
     }
 
-    public Ticket createTicket(int price, int eventId) {
-        return createTicket(price, eventId, Ticket.nrOfTickets);
+    public Ticket createTicket(int price, int eventId, boolean verbose) {
+        return createTicket(price, eventId, Ticket.nrOfTickets, verbose);
     }
 
-    private Ticket createTicket(int price, int eventId, int ticketID) {
+    public Ticket createTicket(int price, int eventId) {
+        return createTicket(price, eventId, Ticket.nrOfTickets, false);
+    }
+
+    private Ticket createTicket(int price, int eventId, int ticketID, boolean verbose) {
+        Event event = EventService.getInstance().getEventById(eventId);
+        if (event == null) {
+            // no event with this id
+            String msg = "Event with " + eventId + " does not exist!";
+            Logger.getInstance().error(msg, true);
+            return null;
+        }
+
         Ticket ticket = new Ticket(price, eventId, ticketID);
         tickets.add(ticket);
-        Logger.getInstance().info("Created ticket for event " + eventId);
+        event.addTicket(ticket);
+        Logger.getInstance().info("Created ticket for event " + eventId, verbose);
 
         return ticket;
     }
@@ -35,8 +50,9 @@ public class TicketService extends CSVUtilities<Ticket> {
     public String[] extractAttributes(Ticket ticket) {
         String price = String.valueOf(ticket.getPrice());
         String eventId = String.valueOf(ticket.getIdEvent());
+        String ticketId = String.valueOf(ticket.getId());
 
-        return new String[]{price, eventId};
+        return new String[]{price, eventId, ticketId};
     }
 
     public void loadObjects() {
@@ -48,11 +64,15 @@ public class TicketService extends CSVUtilities<Ticket> {
         int eventId = Integer.parseInt(attributes[1]);
         int ticketId = Integer.parseInt(attributes[2]);
 
-        return createTicket(price, eventId, ticketId);
+        return createTicket(price, eventId, ticketId, false);
     }
 
     public static TicketService getInstance() {
         return instance;
+    }
+
+    public void writeToFile(Ticket obj) {
+        super.writeToFile(obj, FILENAME);
     }
 
     public void showTickets() {

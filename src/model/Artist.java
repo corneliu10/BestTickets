@@ -23,4 +23,27 @@ public class Artist extends Person {
     public Set<Event> getUpcomingEvents() {
         return upcomingEvents;
     }
+
+    public String showUpcomingEvents() {
+        StringBuilder str = new StringBuilder();
+        str.append("{");
+        for (Event event : upcomingEvents) {
+            str.append(event.getId());
+            str.append(", ");
+        }
+
+        str.append("}, ");
+        return str.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Artist{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                ", upcomingEvents=" + showUpcomingEvents() +
+                '}';
+    }
 }

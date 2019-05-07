@@ -29,6 +29,12 @@ public abstract class CSVUtilities<T> {
             }
         }
 
-        Logger.getInstance().info("Events loaded!");
+        Logger.getInstance().info("Objects loaded!");
+    }
+
+    public void showObjects(List<T> objs) {
+        for (T obj : objs) {
+            System.out.println(obj);
+        }
     }
 }
