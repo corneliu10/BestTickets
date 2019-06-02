@@ -7,7 +7,7 @@ import service.*;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Application {
+public class Application extends Thread {
     private static final String[] menuOptions = new String[] {
         "1. Add client",
         "2. Add artist",
@@ -27,7 +27,7 @@ public class Application {
     private static ArtistService artistService = ArtistService.getInstance();
     private static EventArtistsService eventArtistsService = EventArtistsService.getInstance();
 
-    public static void run() {
+    public void run() {
         loadData();
         while (true) {
             showOptions();
@@ -36,11 +36,7 @@ public class Application {
     }
 
     private static void loadData() {
-        clientService.loadObjects();
-        eventService.loadObjects();
-        ticketService.loadObjects();
-        artistService.loadObjects();
-        eventArtistsService.loadObjects();
+        eventArtistsService.loadEventsArtists();
     }
 
     private static void showOptions() {
@@ -89,10 +85,11 @@ public class Application {
         int eventID = Integer.parseInt(readString("Event ID: "));
 
         eventArtistsService.addPair(eventID, artistID);
+        eventArtistsService.insertEventArtist(eventID, artistID);
     }
 
     private static void showArtists() {
-        artistService.showObjects();
+        artistService.showArtists();
     }
 
     private static void showTickets() {
@@ -103,10 +100,8 @@ public class Application {
         int price = Integer.parseInt(readString("Price: "));
         int eventID = Integer.parseInt(readString("Event ID: "));
 
-        Ticket ticket = ticketService.createTicket(price, eventID, true);
-        if (ticket != null) {
-            ticketService.writeToFile(ticket);
-        }
+        Ticket ticket = new Ticket(price, eventID, -1);
+        ticketService.insertTicket(ticket);
     }
 
     private static void showEvents() {
@@ -124,8 +119,8 @@ public class Application {
         Date endDate = new Date();
         int maxTickets = Integer.parseInt(readString("Max Tickets: "));
 
-        Event event = eventService.createEvent(title, location, startDate, endDate, maxTickets, true);
-        eventService.writeToFile(event);
+        Event event = new Event(title, location, startDate, endDate, maxTickets, -1);
+        eventService.insertEvent(event);
     }
 
     private static void addArtist() {
@@ -133,8 +128,8 @@ public class Application {
         String lastName = readString("Last Name: ");
         int age = Integer.parseInt(readString("Age: "));
 
-        Artist artist = artistService.createArtist(firstName, lastName, age, true);
-        artistService.writeToFile(artist);
+        Artist artist = new Artist(firstName, lastName, age, -1);
+        artistService.insertArtist(artist);
     }
 
     private static void addClient() {
@@ -142,8 +137,8 @@ public class Application {
         String lastName = readString("Last Name: ");
         int age = Integer.parseInt(readString("Age: "));
 
-        Client client = clientService.createClient(firstName, lastName, age, true);
-        clientService.writeToFile(client);
+        Client client = new Client(firstName, lastName, age, -1);
+        clientService.insertClient(client);
     }
 
     private static int readKey() {

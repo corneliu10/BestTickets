@@ -5,7 +5,10 @@ import model.Artist;
 import model.Client;
 import model.Event;
 import utilities.CSVUtilities;
+import utilities.ConnectionUtilities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +16,8 @@ public class ArtistService extends CSVUtilities<Artist> {
     private static final String FILENAME = "artists.csv";
     private static final ArtistService instance = new ArtistService();
     private List<Artist> artists = new ArrayList<>();
+
+    private ConnectionUtilities connectionUtilities = ConnectionUtilities.getInstance();
 
     private ArtistService() {
         if (!CSVService.fileExists(FILENAME)) {
@@ -79,5 +84,50 @@ public class ArtistService extends CSVUtilities<Artist> {
 
     public void showObjects() {
         super.showObjects(artists);
+    }
+
+    public List<Artist> getArtists() {
+        String query = "select * from tickets.clients where isArtist=1;";
+        List<Artist> artists = new ArrayList<>();
+
+        ResultSet rs = connectionUtilities.selectData(query);
+        try {
+            while (rs.next()) {
+                String firstName = rs.getString("firstName");
+                String lastName = rs.getString("lastName");
+                int age = rs.getInt("age");
+                int id = rs.getInt("idClient");
+
+                artists.add(new Artist(firstName, lastName, age, id));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return artists;
+    }
+
+    public void showArtists() {
+        getArtists().stream().forEach(System.out::println);
+    }
+
+    public void insertArtist(Artist obj) {
+        String query = "insert into tickets.clients(firstName, lastName, age, isArtist) " +
+                "values ('" + obj.getFirstName() + "','" + obj.getLastName() + "'," + obj.getAge() + ",1);";
+
+        connectionUtilities.updateData(query);
+    }
+
+    public void updateArtist(String firstName, String lastName, int age, int artistId) {
+        String query = "update tickets.clients set firstName='" + firstName + "', " +
+                "lastName='"+lastName+"', age="+age+" where idClient="+artistId+";";
+
+        connectionUtilities.updateData(query);
+    }
+
+    public void removeArtist(int id) {
+        String query = "delete from tickets.clients where idClient=" + id +";";
+
+        connectionUtilities.updateData(query);
     }
 }

@@ -1,0 +1,218 @@
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Reading from clients.csv
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Loading clients.csv...
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Client Person{firstName='c', lastName='c', age=20, id=0} created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Client Person{firstName='Mali', lastName='Dumi', age=21, id=1} created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Client Person{firstName='Johny', lastName='Smith', age=45, id=2} created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Client Person{firstName='Mali', lastName='UbesheCoco', age=21, id=4} created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Client Person{firstName='Dani', lastName='Mocanu', age=35, id=7} created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Reading from events.csv
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Loading events.csv...
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Reading from tickets.csv
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Loading tickets.csv...
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Reading from artists.csv
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Loading artists.csv...
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Artist Artist{firstName='Martin', lastName='Garrinx', age=20, id=3, upcomingEvents={}, } created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Artist Artist{firstName='Malisor', lastName='Mali', age=45, id=5, upcomingEvents={}, } created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Artist Artist{firstName='Coco', lastName='DJ', age=25, id=6, upcomingEvents={}, } created!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Reading from event_artists.csv
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Loading event_artists.csv...
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Added event 0 to artist 3
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Added artist Artist{firstName='Martin', lastName='Garrinx', age=20, id=3, upcomingEvents={0, }, } to event 0
+May 20, 2019 9:38:42 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Reading from tickets.csv
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Loading tickets.csv...
+May 20, 2019 9:39:25 PM logging.Logger error
+ERROR: Event with 0 does not exist!
+May 20, 2019 9:39:25 PM logging.Logger error
+SEVERE: Event with 0 does not exist!
+May 20, 2019 9:39:25 PM logging.Logger error
+SEVERE: Event with 0 does not exist!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Reading from artists.csv
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Loading artists.csv...
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Artist Artist{firstName='Martin', lastName='Garrinx', age=20, id=3, upcomingEvents={}, } created!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Artist Artist{firstName='Malisor', lastName='Mali', age=45, id=5, upcomingEvents={}, } created!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Artist Artist{firstName='Coco', lastName='DJ', age=25, id=6, upcomingEvents={}, } created!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Reading from event_artists.csv
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Loading event_artists.csv...
+May 20, 2019 9:39:25 PM logging.Logger error
+SEVERE: Event 0 not found!
+May 20, 2019 9:39:25 PM logging.Logger error
+SEVERE: Pair eventID: 0 - artistID: 3 not found!
+May 20, 2019 9:39:25 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Reading from events.csv
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Loading events.csv...
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Reading from tickets.csv
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Loading tickets.csv...
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Reading from event_artists.csv
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Loading event_artists.csv...
+May 20, 2019 9:40:29 PM logging.Logger error
+SEVERE: Artist 3 not found!
+May 20, 2019 9:40:29 PM logging.Logger error
+SEVERE: Pair eventID: 0 - artistID: 3 not found!
+May 20, 2019 9:40:29 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:40:45 PM logging.Logger info
+INFO: Client Person{firstName='johny', lastName='smith', age=24, id=0} created!
+May 20, 2019 9:40:45 PM logging.Logger info
+INFO: Writing to clients.csv
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Reading from events.csv
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Loading events.csv...
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Reading from tickets.csv
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Loading tickets.csv...
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Reading from event_artists.csv
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Loading event_artists.csv...
+May 20, 2019 9:44:19 PM logging.Logger error
+SEVERE: Artist 3 not found!
+May 20, 2019 9:44:19 PM logging.Logger error
+SEVERE: Pair eventID: 0 - artistID: 3 not found!
+May 20, 2019 9:44:19 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:44:26 PM logging.Logger info
+INFO: Client Person{firstName='a', lastName='a', age=1, id=0} created!
+May 20, 2019 9:44:26 PM logging.Logger info
+INFO: Writing to clients.csv
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Reading from events.csv
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Loading events.csv...
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Reading from tickets.csv
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Loading tickets.csv...
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Created ticket for event 0
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Reading from event_artists.csv
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Loading event_artists.csv...
+May 20, 2019 9:47:16 PM logging.Logger error
+SEVERE: Artist 3 not found!
+May 20, 2019 9:47:16 PM logging.Logger error
+SEVERE: Pair eventID: 0 - artistID: 3 not found!
+May 20, 2019 9:47:16 PM logging.Logger info
+INFO: Objects loaded!
+May 20, 2019 9:47:25 PM logging.Logger info
+INFO: Client Person{firstName='a', lastName='a', age=1, id=0} created!
+May 20, 2019 10:08:35 PM logging.Logger info
+INFO: Client Person{firstName='a', lastName='a', age=1, id=1} created!
+May 20, 2019 10:08:54 PM logging.Logger info
+INFO: Artist Artist{firstName='Martin', lastName='Armando', age=23, id=1, upcomingEvents={}, } created!
+May 20, 2019 10:09:28 PM logging.Logger error
+SEVERE: Artist 0 not found!
+May 20, 2019 10:12:13 PM logging.Logger info
+INFO: Event 0 created!
+May 20, 2019 10:18:39 PM logging.Logger info
+INFO: Client Person{firstName='a', lastName='a', age=1, id=1} created!
+May 20, 2019 10:18:39 PM logging.Logger info
+INFO: Artist Artist{firstName='Martin', lastName='Armando', age=23, id=2, upcomingEvents={}, } created!
+May 20, 2019 10:19:54 PM logging.Logger info
+INFO: Event 0 created!
+May 20, 2019 10:22:06 PM logging.Logger info
+INFO: Client Person{firstName='a', lastName='a', age=1, id=1} created!
+May 20, 2019 10:22:06 PM logging.Logger info
+INFO: Artist Artist{firstName='Martin', lastName='Armando', age=23, id=2, upcomingEvents={}, } created!
+May 20, 2019 10:22:11 PM logging.Logger info
+INFO: Event 0 created!
+May 20, 2019 10:23:31 PM logging.Logger info
+INFO: Client Person{firstName='a', lastName='a', age=1, id=1} created!
+May 20, 2019 10:23:31 PM logging.Logger info
+INFO: Artist Artist{firstName='Martin', lastName='Armando', age=23, id=2, upcomingEvents={}, } created!
+May 20, 2019 10:23:38 PM logging.Logger info
+INFO: Event 0 created!
+May 20, 2019 10:28:49 PM logging.Logger info
+INFO: Artist Artist{firstName='Mali', lastName='Dumi', age=22, id=2, upcomingEvents={}, } created!
+May 20, 2019 10:45:12 PM logging.Logger info
+INFO: Person{firstName='a', lastName='a', age=1, id=1}
+May 20, 2019 11:21:17 PM logging.Logger error
+SEVERE: Artist 2 not found!
+May 20, 2019 11:21:17 PM logging.Logger error
+SEVERE: Pair eventID: 1 - artistID: 2 not found!

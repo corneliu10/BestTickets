@@ -5,8 +5,12 @@ import model.Event;
 import model.Ticket;
 import sun.rmi.runtime.Log;
 import utilities.CSVUtilities;
+import utilities.ConnectionUtilities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TicketService extends CSVUtilities<Ticket> {
@@ -14,6 +18,7 @@ public class TicketService extends CSVUtilities<Ticket> {
 
     private static List<Ticket> tickets = new ArrayList<>();
     private static TicketService instance = new TicketService();
+    private ConnectionUtilities connectionUtilities = ConnectionUtilities.getInstance();
 
     private TicketService() {
         if (!CSVService.fileExists(FILENAME)) {
@@ -76,10 +81,33 @@ public class TicketService extends CSVUtilities<Ticket> {
     }
 
     public void showTickets() {
-        for (Ticket ticket : tickets) {
-            System.out.println(ticket);
-        }
+        getTickets().stream().forEach(System.out::println);
     }
 
+    public void insertTicket(Ticket obj) {
+        String query = "insert into tickets.tickets(price, idEvent) " +
+                "values (" + obj.getPrice() + "," + obj.getIdEvent() + ");";
 
+        connectionUtilities.updateData(query);
+    }
+
+    public List<Ticket> getTickets() {
+        String query = "select * from tickets.tickets;";
+        List<Ticket> tickets = new ArrayList<>();
+
+        ResultSet rs = connectionUtilities.selectData(query);
+        try {
+            while (rs.next()) {
+                int idTicket = rs.getInt("idTicket");
+                int idEvent = rs.getInt("idEvent");
+                int price = rs.getInt("Price");
+
+                tickets.add(new Ticket(price, idEvent, idTicket));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return tickets;
+    }
 }

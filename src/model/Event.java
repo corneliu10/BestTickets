@@ -1,6 +1,7 @@
 package model;
 
 import logging.Logger;
+import service.EventService;
 import service.TicketService;
 
 import java.util.*;
@@ -59,9 +60,7 @@ public class Event implements IEvent {
         sb.append("Event Title: "); sb.append(this.title);
         sb.append('\n');
         sb.append("Artists: ");
-        for (Artist artist : artists) {
-            sb.append(artist.toString());
-        }
+        EventService.getInstance().showArtists(this.id);
         sb.append("\nLocation: "); sb.append(location);
         sb.append('\n');
         sb.append("Start date: "); sb.append(this.startDate.toString());

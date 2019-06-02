@@ -1,0 +1,58 @@
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Reading from clients.csv
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Loading clients.csv...
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Client Person{firstName='c', lastName='c', age=20, id=0} created!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Client Person{firstName='Mali', lastName='Dumi', age=21, id=1} created!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Client Person{firstName='Johny', lastName='Smith', age=45, id=2} created!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Client Person{firstName='Mali', lastName='UbesheCoco', age=21, id=4} created!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Objects loaded!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Reading from events.csv
+May 14, 2019 9:33:40 AM logging.Logger info
+IFO: Loading events.csv...
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Objects loaded!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Reading from tickets.csv
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Loading tickets.csv...
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Created ticket for event 0
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Created ticket for event 0
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Created ticket for event 0
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Objects loaded!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Reading from artists.csv
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Loading artists.csv...
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Artist Artist{firstName='Martin', lastName='Garrinx', age=20, id=3, upcomingEvents={}, } created!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Artist Artist{firstName='Malisor', lastName='Mali', age=45, id=5, upcomingEvents={}, } created!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Artist Artist{firstName='Coco', lastName='DJ', age=25, id=6, upcomingEvents={}, } created!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Objects loaded!
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Reading from event_artists.csv
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Loading event_artists.csv...
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Added event 0 to artist 3
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Added artist Artist{firstName='Martin', lastName='Garrinx', age=20, id=3, upcomingEvents={0, }, } to event 0
+May 14, 2019 9:33:40 AM logging.Logger info
+INFO: Objects loaded!
+May 14, 2019 9:35:01 AM logging.Logger info
+INFO: Client Person{firstName='Dani', lastName='Mocanu', age=35, id=7} created!
+May 14, 2019 9:35:01 AM logging.Logger info
+INFO: Writing to clients.csv

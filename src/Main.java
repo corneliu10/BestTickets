@@ -1,8 +1,10 @@
-import model.Client;
+import gui.HomeView;
 
 public class Main {
     public static void main(String[] args) {
-        Application.run();
-//        CSVService.writeDataToFile("clients.csv", new String[]{"abc", "ab"});
+        Application consoleApp = new Application();
+        consoleApp.start();
+
+        HomeView home = new HomeView();
     }
 }

@@ -4,13 +4,19 @@ import javafx.util.Pair;
 import logging.Logger;
 import model.Artist;
 import model.Event;
+import utilities.ConnectionUtilities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 public class EventArtistsService {
     private static final String FILENAME = "event_artists.csv";
     private static final EventArtistsService instance = new EventArtistsService();
+
+    private ConnectionUtilities connectionUtilities = ConnectionUtilities.getInstance();
 
     private EventArtistsService() {
         if (!CSVService.fileExists(FILENAME)) {
@@ -84,6 +90,28 @@ public class EventArtistsService {
 
         artist.addEvent(event);
         event.addArtist(artist);
-        writeToFile(eventID, artistID);
+    }
+
+    public void loadEventsArtists() {
+        String query = "select * from tickets.events_artists;";
+
+        ResultSet rs = connectionUtilities.selectData(query);
+        try {
+            while (rs.next()) {
+                int idEvent = rs.getInt("idEvent");
+                int idArtist = rs.getInt("idArtist");
+
+                loadPair(idEvent, idArtist);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void insertEventArtist(int idEvent, int idArtist) {
+        String query = "insert into tickets.events_artists(idEvent, idArtist) " +
+                "values (" + idEvent + "," + idArtist + ");";
+
+        connectionUtilities.updateData(query);
     }
 }

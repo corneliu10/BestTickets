@@ -2,8 +2,12 @@ package service;
 
 import logging.Logger;
 import model.Client;
+import sun.rmi.runtime.Log;
 import utilities.CSVUtilities;
+import utilities.ConnectionUtilities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +16,8 @@ public class ClientService extends CSVUtilities<Client> {
 
     private static List<Client> clients = new ArrayList<>();
     private static ClientService instance = new ClientService();
+
+    private ConnectionUtilities connectionUtilities = ConnectionUtilities.getInstance();
 
     private ClientService() {
         if (!CSVService.fileExists(FILENAME)) {
@@ -76,8 +82,50 @@ public class ClientService extends CSVUtilities<Client> {
     }
 
     public void showClients() {
+        List<Client> clients = getClients();
+
         for (Client client : clients) {
-            System.out.println(client);
+            System.out.println(client.toString());
         }
+    }
+
+    public List<Client> getClients() {
+        String query = "select * from tickets.clients where isArtist=0;";
+        List<Client> clients = new ArrayList<>();
+        ResultSet rs = connectionUtilities.selectData(query);
+        try {
+            while (rs.next()) {
+                String firstName = rs.getString("firstName");
+                String lastName = rs.getString("lastName");
+                int age = rs.getInt("age");
+                int id = rs.getInt("idClient");
+
+                clients.add(new Client(firstName, lastName, age, id));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return clients;
+    }
+
+    public void insertClient(Client obj) {
+        String query = "insert into tickets.clients(firstName, lastName, age, isArtist) " +
+                 "values ('" + obj.getFirstName() + "','" + obj.getLastName() + "'," + obj.getAge() + ",0);";
+
+        connectionUtilities.updateData(query);
+    }
+
+    public void removeClient(int clientID) {
+        String query = "delete from tickets.clients where idClient=" + clientID +";";
+
+        connectionUtilities.updateData(query);
+    }
+
+    public void updateClient(String firstName, String lastName, int age, int clientId) {
+        String query = "update tickets.clients set firstName='" + firstName + "', " +
+                "lastName='"+lastName+"', age="+age+" where idClient="+clientId+";";
+
+        connectionUtilities.updateData(query);
     }
 }
