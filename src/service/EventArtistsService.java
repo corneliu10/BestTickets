@@ -55,7 +55,7 @@ public class EventArtistsService {
     public Pair<Event, Artist> validatePair(int eventID, int artistID) {
         Artist artist = ArtistService.getInstance().getArtistById(artistID);
         if (artist == null) {
-            Logger.getInstance().error("Artist " + artistID + " not found!", true);
+            Logger.getInstance().error("Artist " + artistID + " not found!");
             return null;
         }
 

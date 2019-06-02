@@ -2,37 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="705f7b7c-00de-4542-815d-c2b9d1ece0c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/AddArtistView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/AddClientView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/AddEventView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/AddTicketView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/AssignEventArtistView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/HomeView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ShowArtistsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ShowClientsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ShowEventsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ShowTicketsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilities/ConnectionUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/DateTextField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BestTickets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BestTickets.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients.csv" beforeDir="false" afterPath="$PROJECT_DIR$/clients.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/model/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/service/ArtistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/service/ArtistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/service/ClientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/service/EventArtistsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/service/EventArtistsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02.06.2019.log" beforeDir="false" afterPath="$PROJECT_DIR$/02.06.2019.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/gui/AddEventView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/gui/AddEventView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/gui/ShowEventsView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/gui/ShowEventsView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BestTickets/service/EventService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/service/EventService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BestTickets/service/TicketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BestTickets/service/TicketService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ArtistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ArtistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AddEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddEventView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AddTicketView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddTicketView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/HomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/HomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ShowArtistsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ShowArtistsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ShowClientsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ShowClientsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ShowEventsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ShowEventsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ShowTicketsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ShowTicketsView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/EventArtistsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/EventArtistsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/EventService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/ConnectionUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/ConnectionUtilities.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,10 +30,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application.java">
+        <entry file="file://$PROJECT_DIR$/src/gui/ShowEventsView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-258">
-              <caret line="87" column="65" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="87" selection-end-column="65" />
+              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,10 +42,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/ArtistService.java">
+        <entry file="file://$PROJECT_DIR$/src/gui/AddArtistView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="125" column="5" lean-forward="true" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
+            <state relative-caret-position="252">
+              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/AddTicketView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/HomeView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Event.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,10 +87,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gui/ShowEventsView.java">
+        <entry file="file://$PROJECT_DIR$/src/service/EventArtistsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+            <state relative-caret-position="86">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,10 +99,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/ClientService.java">
+        <entry file="file://$PROJECT_DIR$/src/gui/ShowTicketsView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="119" column="8" lean-forward="true" selection-start-line="119" selection-start-column="8" selection-end-line="121" selection-end-column="46" />
+            <state relative-caret-position="133">
+              <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,10 +111,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/AssignEventArtistView.java">
+        <entry file="file://$PROJECT_DIR$/src/utilities/ConnectionUtilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="156">
+              <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,8 +125,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/ShowArtistsView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="61" column="9" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
+            <state relative-caret-position="269">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/ShowClientsView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,6 +162,7 @@
       <find>Ticket</find>
       <find>Tick</find>
       <find>getClie</find>
+      <find>not found</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,8 +195,6 @@
         <option value="$PROJECT_DIR$/src/service/CSVService.java" />
         <option value="$PROJECT_DIR$/14.05.2019.log" />
         <option value="$PROJECT_DIR$/20.05.2019.log" />
-        <option value="$PROJECT_DIR$/src/service/EventArtistsService.java" />
-        <option value="$PROJECT_DIR$/src/utilities/ConnectionUtilities.java" />
         <option value="$PROJECT_DIR$/src/model/Event.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -172,19 +202,23 @@
         <option value="$PROJECT_DIR$/src/gui/AddClient.java" />
         <option value="$PROJECT_DIR$/src/gui/Home.java" />
         <option value="$PROJECT_DIR$/src/gui/AddClientView.java" />
-        <option value="$PROJECT_DIR$/src/service/EventService.java" />
-        <option value="$PROJECT_DIR$/src/service/TicketService.java" />
-        <option value="$PROJECT_DIR$/src/gui/ShowTicketsView.java" />
         <option value="$PROJECT_DIR$/src/gui/AddArtistView.java" />
-        <option value="$PROJECT_DIR$/src/gui/AddEventView.java" />
-        <option value="$PROJECT_DIR$/src/gui/AddTicketView.java" />
-        <option value="$PROJECT_DIR$/src/gui/HomeView.java" />
         <option value="$PROJECT_DIR$/src/gui/AssignEventArtistView.java" />
         <option value="$PROJECT_DIR$/src/service/ClientService.java" />
-        <option value="$PROJECT_DIR$/src/gui/ShowClientsView.java" />
         <option value="$PROJECT_DIR$/src/service/ArtistService.java" />
-        <option value="$PROJECT_DIR$/src/gui/ShowArtistsView.java" />
+        <option value="$PROJECT_DIR$/src/gui/JDatePicker.java" />
+        <option value="$PROJECT_DIR$/src/gui/DateTextField.java" />
+        <option value="$PROJECT_DIR$/src/service/EventService.java" />
         <option value="$PROJECT_DIR$/src/gui/ShowEventsView.java" />
+        <option value="$PROJECT_DIR$/src/gui/AddEventView.java" />
+        <option value="$PROJECT_DIR$/src/gui/ShowArtistsView.java" />
+        <option value="$PROJECT_DIR$/src/gui/ShowClientsView.java" />
+        <option value="$PROJECT_DIR$/src/service/TicketService.java" />
+        <option value="$PROJECT_DIR$/src/gui/ShowTicketsView.java" />
+        <option value="$PROJECT_DIR$/src/utilities/ConnectionUtilities.java" />
+        <option value="$PROJECT_DIR$/src/gui/AddTicketView.java" />
+        <option value="$PROJECT_DIR$/src/gui/HomeView.java" />
+        <option value="$PROJECT_DIR$/src/service/EventArtistsService.java" />
       </list>
     </option>
   </component>
@@ -253,7 +287,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559504210810" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559510916244" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -262,6 +296,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -325,11 +360,12 @@
       <workItem from="1558456278329" duration="885000" />
       <workItem from="1559376095706" duration="3506000" />
       <workItem from="1559465557048" duration="12255000" />
+      <workItem from="1559507722776" duration="3223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64429000" />
+    <option name="totallyTimeSpent" value="67652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,7 +379,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20566802" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20890689" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -400,15 +436,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clients.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
+      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Client.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -453,33 +489,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tickets.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="34">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/event_artists.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="34">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="49" selection-start-column="49" selection-end-column="49" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/07.05.2019.log">
@@ -519,13 +555,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/artists.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="68">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
@@ -567,26 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utilities/ConnectionUtilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/EventArtistsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="106" column="27" selection-start-line="106" selection-start-column="27" selection-end-line="106" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Artist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -595,16 +611,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#663#664#0" expanded="true" />
             <element signature="e#700#701#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -623,64 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/EventService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="132" column="58" selection-start-line="132" selection-start-column="58" selection-end-line="132" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4776#4777#0" expanded="true" />
-            <element signature="e#4837#4838#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/TicketService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="83" column="59" selection-start-line="83" selection-start-column="59" selection-end-line="83" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2648#2649#0" expanded="true" />
-            <element signature="e#2675#2676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/ShowTicketsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/AddEventView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/AddArtistView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -691,23 +643,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/AddTicketView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/HomeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -722,10 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/AssignEventArtistView.java">
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="1326">
+          <caret line="87" column="65" selection-start-line="86" selection-start-column="8" selection-end-line="87" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -734,8 +669,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/ClientService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="119" column="8" lean-forward="true" selection-start-line="119" selection-start-column="8" selection-end-line="121" selection-end-column="46" />
+        <state relative-caret-position="1768">
+          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="121" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/AssignEventArtistView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -744,8 +689,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/ArtistService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="125" column="5" lean-forward="true" selection-start-line="125" selection-start-column="5" selection-end-line="125" selection-end-column="5" />
+        <state relative-caret-position="252">
+          <caret line="130" column="46" lean-forward="true" selection-start-line="128" selection-start-column="8" selection-end-line="130" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/DateTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1278#1279#0" expanded="true" />
+            <element signature="method#DateTextField#2;class#DateTextField#0" />
+            <element signature="e#1651#2013#0" expanded="true" />
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#3561#3562#0" expanded="true" />
+            <element signature="e#3599#3600#0" expanded="true" />
+            <element signature="e#3665#3666#0" expanded="true" />
+            <element signature="e#8895#8896#0" expanded="true" />
+            <element signature="e#8968#8969#0" expanded="true" />
+            <element signature="e#9010#9011#0" expanded="true" />
+            <element signature="e#9084#9085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/AddEventView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/EventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="178" column="5" lean-forward="true" selection-start-line="174" selection-start-column="4" selection-end-line="178" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4776#4777#0" expanded="true" />
+            <element signature="e#4841#4842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/TicketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2648#2649#0" expanded="true" />
+            <element signature="e#2714#2715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/ShowEventsView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258">
+          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -754,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/ShowClientsView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1017">
-          <caret line="61" column="9" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
+        <state relative-caret-position="34">
+          <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -764,28 +776,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/ShowArtistsView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="61" column="9" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
+        <state relative-caret-position="269">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/gui/ShowTicketsView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-258">
-          <caret line="87" column="65" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="87" selection-end-column="65" />
+        <state relative-caret-position="133">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/ShowEventsView.java">
+    <entry file="file://$PROJECT_DIR$/src/utilities/ConnectionUtilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+        <state relative-caret-position="156">
+          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/AddArtistView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/AddTicketView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/HomeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="55" column="30" lean-forward="true" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/EventArtistsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

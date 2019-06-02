@@ -34,12 +34,14 @@ public class ConnectionUtilities {
     }
 
     public void updateData(String query) {
-        try {
-            Statement stm = connection.createStatement();
-            stm.executeUpdate(query);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        new Thread(() -> {
+            try {
+                Statement stm = connection.createStatement();
+                stm.executeUpdate(query);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 
     public ResultSet selectData(String query) {

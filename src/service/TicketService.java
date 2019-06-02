@@ -110,4 +110,18 @@ public class TicketService extends CSVUtilities<Ticket> {
 
         return tickets;
     }
+
+    public void updateTicket(int idTicket, int price, int idEvent) {
+        String query = "update tickets.tickets set " +
+                "price=" + price + ",idEvent=" + idEvent +
+                " where idTicket=" + idTicket + ";";
+
+        connectionUtilities.updateData(query);
+    }
+
+    public void removeTicket(int id) {
+        String query = "delete from tickets.tickets where idTicket=" + id +";";
+
+        connectionUtilities.updateData(query);
+    }
 }

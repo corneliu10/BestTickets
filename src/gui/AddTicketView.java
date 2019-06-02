@@ -23,7 +23,7 @@ public class AddTicketView {
         eventIDLbl.setBounds(50, 70, 150, 40);
         eventIDTxt.setBounds(150, 70, 150, 40);
 
-        addTicketBtn.setBounds(150, 200, 150, 40);
+        addTicketBtn.setBounds(150, 150, 150, 40);
         addTicketBtn.addActionListener(e -> {
             Ticket ticket = new Ticket(Integer.parseInt(priceTxt.getText()), Integer.parseInt(eventIDTxt.getText()), -1);
             TicketService.getInstance().insertTicket(ticket);

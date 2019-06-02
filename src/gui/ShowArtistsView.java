@@ -12,6 +12,7 @@ public class ShowArtistsView {
     List<JLabel> artistsLbls = new ArrayList<>();
 
     public ShowArtistsView() {
+        addHeaderLabels();
         addArtistsToFrame();
 
         frame.setSize(500, 500);
@@ -19,9 +20,28 @@ public class ShowArtistsView {
         frame.setVisible(true);
     }
 
+    private void addHeaderLabels() {
+        JLabel label1 = new JLabel("Id");
+        label1.setBounds(10, 10, 10, 15);
+
+        JLabel label2 = new JLabel("First Name");
+        label2.setBounds(24, 10, 70, 15);
+
+        JLabel label3 = new JLabel("Last Name");
+        label3.setBounds(120, 10, 70, 15);
+
+        JLabel label4 = new JLabel("Age");
+        label4.setBounds(210, 10, 70, 15);
+
+        frame.add(label1);
+        frame.add(label2);
+        frame.add(label3);
+        frame.add(label4);
+    }
+
     private void addArtistsToFrame() {
         List<Artist> artists = ArtistService.getInstance().getArtists();
-        int y = 10;
+        int y = 25;
         for (Artist c : artists) {
             JLabel label = new JLabel(String.valueOf(c.getId()));
             label.setBounds(10, y, 10,  20);

@@ -15,15 +15,15 @@ public class HomeView {
     JButton showArtistsButton = new JButton("Show artists");
 
     public HomeView() {
-        addClientButton.setBounds(130, 10, 150, 40);
-        addArtistButton.setBounds(130, 50, 150, 40);
-        addEventButton.setBounds(130, 90, 150, 40);
-        addTicketButton.setBounds(130, 130, 150, 40);
-        showClientsButton.setBounds(130, 170, 150, 40);
-        showEventsButton.setBounds(130, 210, 150, 40);
-        showTicketsButton.setBounds(130, 250, 150, 40);
-        showArtistsButton.setBounds(130, 290, 150, 40);
-        assignEventArtist.setBounds(130, 330, 150, 40);
+        addClientButton.setBounds(175, 10, 150, 40);
+        addArtistButton.setBounds(175, 60, 150, 40);
+        addEventButton.setBounds(175, 110, 150, 40);
+        addTicketButton.setBounds(175, 160, 150, 40);
+        showClientsButton.setBounds(175, 210, 150, 40);
+        showEventsButton.setBounds(175, 260, 150, 40);
+        showTicketsButton.setBounds(175, 310, 150, 40);
+        showArtistsButton.setBounds(175, 360, 150, 40);
+        assignEventArtist.setBounds(175, 410, 150, 40);
 
         addClientButton.addActionListener(e -> {
             AddClientView view = new AddClientView();
@@ -66,7 +66,7 @@ public class HomeView {
         frame.add(showTicketsButton);
         frame.add(showArtistsButton);
 
-        frame.setSize(400, 500);
+        frame.setSize(500, 500);
         frame.setLayout(null);
         frame.setVisible(true);
     }

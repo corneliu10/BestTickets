@@ -161,4 +161,20 @@ public class EventService extends CSVUtilities<Event> {
             e.printStackTrace();
         }
     }
+
+    public void updateEvent(String title, String location, Date startDate, Date endDate, int maxTickets, int id) {
+        String query = "update tickets.events set " +
+                "title='" + title + "',location='" + location + "',startDate='"
+                + ConnectionUtilities.dateFormatter.format(startDate) + "', endDate='"
+                + ConnectionUtilities.dateFormatter.format(endDate) + "',maxTickets=" + maxTickets + "" +
+                " where idEvent=" + id + ";";
+
+        connectionUtilities.updateData(query);
+    }
+
+    public void removeEvent(int id) {
+        String query = "delete from tickets.events where idEvent=" + id +";";
+
+        connectionUtilities.updateData(query);
+    }
 }
